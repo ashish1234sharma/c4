@@ -7,6 +7,24 @@ import Stack from "@mui/material/Stack";
 
 export const LoginSignUp = () => {
   const [showForm, setShowForm] = React.useState(true);
+  const [data,setData] = React.useState([]);
+  const [signUp, setSignUp] = React.useState([]);
+
+  const handleSubmit = (e) => {
+ e.preventDefault();
+   const payload = data;
+
+  }
+
+  const handleChange = (e) => {
+  const {id,value} = e.target;
+
+  setData({
+    ...data,
+    [id]:value
+  })
+  }
+
   return (
     <Paper sx={{ width: "300px", margin: "25px auto", p: "1px 24px 24px" }}>
       <Stack
@@ -43,7 +61,7 @@ export const LoginSignUp = () => {
               type="text"
               className="name"
               label="name"
-              onChange={(event) => {}}
+              onChange={handleChange}
               required
               size="small"
               sx={{ mb: "24px" }}
@@ -53,7 +71,7 @@ export const LoginSignUp = () => {
               type="text"
               className="password"
               label="password"
-              onChange={(event) => {}}
+              onChange={handleChange}
               required
               size="small"
               sx={{ mb: "24px" }}
@@ -83,13 +101,13 @@ export const LoginSignUp = () => {
               type="text"
               className="password"
               label="password"
-              onChange={(event) => {}}
+               onChange={handleChange}
               required
               size="small"
               sx={{ mb: "24px" }}
             />
             <br />
-            <select value={""} className="location" onChange={(event) => {}}>
+            <select value={""} className="location"  onChange={handleChange}>
               <option value=""></option>
               <option value="bangalore">Bangalore</option>
               <option value="kolkata">Kolkata</option>
@@ -102,14 +120,14 @@ export const LoginSignUp = () => {
             <TextField
               type="checkbox"
               className="technology"
-              onChange={(event) => {}}
+               onChange={handleChange}
             />
             <br />
             <label>food</label>
             <TextField
               type="checkbox"
               className="food"
-              onChange={(event) => {}}
+               onChange={handleChange}
               size="small"
             />
             <br />
@@ -117,35 +135,35 @@ export const LoginSignUp = () => {
             <TextField
               type="checkbox"
               className="movies"
-              onChange={(event) => {}}
+               onChange={handleChange}
             />
             <br />
             <label>culture</label>
             <TextField
               type="checkbox"
               className="culture"
-              onChange={(event) => {}}
+               onChange={handleChange}
             />
             <br />
             <label>art</label>
             <TextField
               type="checkbox"
               className="art"
-              onChange={(event) => {}}
+               onChange={handleChange}
             />
             <br />
             <label>drama</label>
             <TextField
               type="checkbox"
               className="drama"
-              onChange={(event) => {}}
+               onChange={handleChange}
             />
             <br />
             <TextField
               type="text"
               className="image"
               label="image"
-              onChange={(event) => {}}
+               onChange={handleChange}
               required
               size="small"
               sx={{ mb: "24px" }}
