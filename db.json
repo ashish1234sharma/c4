@@ -1,14 +1,5 @@
 {
   "users": [
-    {
-      "inputdata": {
-        "name": "ashish",
-        "password": "12345",
-        "location": "kolkata",
-        "food": "on",
-        "image": "https://tse3.mm.bing.net/th?id=OIP.gA6RS6OzmYC8WPBsBvtEwQHaHa&pid=Api&P=0&w=173&h=173"
-      },
-      "id": 1
-    }
+   
   ]
 }

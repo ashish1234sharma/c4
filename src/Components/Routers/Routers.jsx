@@ -7,18 +7,16 @@ import { Navbar } from "../Navbar/Navbar";
 import { NotFound } from "../NotFound/NotFound";
 
 export const Routers = () => {
-    return (<>
-        <Navbar />
-        <Routes>
-            <Route path="/" element={<Home />} />
-            {/* Create other routes here: loginsignup, meetup, addmeetup and 404 */}
-            <Route path="/loginsignup" element={<LoginSignUp />} />
-            <Route path="/*" element={<NotFound/>} />
-            <Route path="/event" element={< Event/>} />
-            <Route path="/AddMeetup" element={< AddMeetup/>} />
-            <Route path="/AddMeetup/:id" element={< AddMeetup/>} />
-            {/* meetup route should be dynamic */}
-        </Routes>
-        
-    </>);
-}
+  return (
+    <>
+      <Navbar />
+      <Routes>
+        <Route path="*" element={<NotFound />} />
+        <Route path="/" element={<Home />} />
+        {/* Create other routes here: loginsignup, meetup, addmeetup and 404 */}
+        {/* meetup route should be dynamic */}
+        <Route path="/loginsignup" exact={true} element={<LoginSignUp />} />
+      </Routes>
+    </>
+  );
+};
